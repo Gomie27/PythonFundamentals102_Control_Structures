@@ -11,7 +11,10 @@ user_age_str = "Enter your age: "
 user_age_int = int(user_age_str)
 # 2. Use conditional statements to categorise the user into one of the following categories:
 # - If age is less than 18, print "You are a minor."
+if user_age_int < 18:
+    print("You are a minor.")
 # - If age is between 18 and 65 (inclusive), print "You are an adult."
+
 # - If age is 66 or higher, print "You are a senior citizen."
 
 
