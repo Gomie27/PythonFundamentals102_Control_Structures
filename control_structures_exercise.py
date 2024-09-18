@@ -14,8 +14,12 @@ user_age_int = int(user_age_str)
 if user_age_int < 18:
     print("You are a minor.")
 # - If age is between 18 and 65 (inclusive), print "You are an adult."
+if user_age_int > 18 and user_age_int < 66:
+    print("You are an adult.")
 
 # - If age is 66 or higher, print "You are a senior citizen."
+if user_age_int > 66:
+    print("You are a senior citizen.")
 
 
 """ 
@@ -24,6 +28,18 @@ In this exercise, you will use conditional statements to check if a year is a le
 """
 
 year = 0000
+
+if year < 100 and year % 4 != 0:
+    print(f"{year} is not a leap year.")
+
+elif year % 100 != 0:
+    print(f"{year} is not a leap year.")
+
+elif year % 400 != 0:
+    print(f"{year} is not a leap year.")
+
+else:
+    print(F"{year} is a leap year!")
 
 
 
@@ -37,15 +53,16 @@ limit_str = "Enter a number as the limit: "
 limit = limit_str  # Convert the limit_str to an integer
 
 # 2. Use a  for loop to iterate from 1 to the user-defined limit (inclusive) and print each number.
+for i in range(1,limit + 1):
+    print(i)
 
 # Use a while loop to iterate from 1 to the user-defined limit (inclusive) and print each number.
 # Initialise a variable to start the loop
 number = 1
-while number <= 1:
-    #print number
-    # Increment number in each iteration   
+while number <= limit:
+    print(number) #print number
+    number += 1 # Increment number in each iteration
     pass
-
 
 """
 Exercise: Loop Control Statements
@@ -54,14 +71,15 @@ In this exercise, you will use a loop and loop control statements to print odd n
 
 # 1. Ask the user to enter a number as the limit and convert it to an integer.
 limit_str = "Enter a number as the limit: "
-# Convert the limit_str to an integer
+limit = limit_str # Convert the limit_str to an integer
 
 # 2. Use a for loop to iterate from 1 to the user-defined limit (inclusive).
 # 3. Inside the loop, use a loop control statement to skip even numbers and print odd numbers.
 # Fill in the code to achieve the goal:
 
 for number in range(1):
-    # Add code to check if number is odd and print odd numbers
+    if number <= limit and number % 2 != 0:
+        print(number)     # Add code to check if number is odd and print odd numbers
     pass
 
 
